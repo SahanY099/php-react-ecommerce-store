@@ -1,3 +1,4 @@
+import ModeToggle from "@/components/mode-toggle";
 import { Outlet } from "react-router-dom";
 
 export default function GuestLayout() {
@@ -23,6 +24,9 @@ export default function GuestLayout() {
         </div>
       </div>
       <div className="px-8">
+        <div className="fixed right-24 top-6 md:right-28 md:top-8">
+          <ModeToggle />
+        </div>
         <Outlet />
       </div>
     </div>
