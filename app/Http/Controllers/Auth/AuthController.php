@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 use App\Http\Requests\Auth\SignupRequest;
-use App\Http\Requests\Auth\SigninRequest;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthController extends Controller
 {
@@ -29,7 +29,7 @@ class AuthController extends Controller
 
     }
 
-    public function signin(SigninRequest $request)
+    public function login(LoginRequest $request)
     {
         $data = $request->validated();
         ['email' => $email, 'password' => $password, 'remember' => $remember] = $data;

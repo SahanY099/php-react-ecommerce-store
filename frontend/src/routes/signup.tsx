@@ -62,7 +62,7 @@ export default function Signup() {
           "fixed right-16 top-6 md:right-20 md:top-10"
         )}
       >
-        Sign In
+        Login
       </Link>
       <div className="grid items-center justify-center gap-6">
         <div className="flex flex-col items-center justify-center">

@@ -17,7 +17,7 @@ interface SignupError {
   [key: string]: Array<string>;
 }
 
-export default function Signin() {
+export default function Login() {
   const [loading, setLoading] = useState(false);
   const { setToken, setUser } = useContext(AuthContext);
   const [remember, setRemember] = useState(false);
@@ -36,7 +36,7 @@ export default function Signin() {
 
     setLoading(true);
     axiosClient
-      .post("/auth/signin", payload)
+      .post("/auth/login", payload)
       .then(({ data }) => {
         const { user, token } = data;
         setErrors({});
@@ -67,9 +67,7 @@ export default function Signin() {
       </Link>
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Sign in to your account
-          </h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Welcome!</h1>
           <p className="text-center text-sm text-muted-foreground">
             Enter your email and password below to access your account.
           </p>
@@ -107,7 +105,7 @@ export default function Signin() {
             </div>
           </div>
 
-          <LoadingButon loading={loading}>Sign In</LoadingButon>
+          <LoadingButon loading={loading}>Login</LoadingButon>
         </form>
 
         <p className="px-8 text-center text-sm text-muted-foreground">
