@@ -58,10 +58,11 @@ export default function Signup() {
         to="/login"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "fixed right-6 top-6 md:right-8 md:top-8"
+          // "fixed right-6 top-6 md:right-8 md:top-8"
+          "fixed right-16 top-6 md:right-20 md:top-10"
         )}
       >
-        Login
+        Sign In
       </Link>
       <div className="grid items-center justify-center gap-6">
         <div className="flex flex-col items-center justify-center">

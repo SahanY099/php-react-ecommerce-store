@@ -24,7 +24,7 @@ export default function GuestLayout() {
         </div>
       </div>
       <div className="px-8">
-        <div className="fixed right-24 top-6 md:right-28 md:top-8">
+        <div className="fixed right-6 top-6 md:right-10 md:top-10">
           <ModeToggle />
         </div>
         <Outlet />
