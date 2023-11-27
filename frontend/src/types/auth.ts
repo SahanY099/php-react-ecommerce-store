@@ -3,3 +3,10 @@ export interface CurrentUser {
   email: string;
   id: number;
 }
+
+export interface AuthError {
+  message: string;
+  errors: {
+    [key: string]: Array<string>;
+  };
+}
