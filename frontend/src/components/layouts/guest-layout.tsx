@@ -1,7 +1,15 @@
 import ModeToggle from "@/components/mode-toggle";
-import { Outlet } from "react-router-dom";
+import { AuthContext } from "@/context/auth-provider";
+import { useContext } from "react";
+import { Navigate, Outlet } from "react-router-dom";
 
 export default function GuestLayout() {
+  const { token } = useContext(AuthContext);
+
+  if (token) {
+    return <Navigate to="/" />;
+  }
+
   return (
     <div className="container relative grid h-screen max-w-none items-center justify-center px-0 md:grid-cols-2">
       <div className="relative hidden h-full flex-col p-10 text-white  md:flex">
